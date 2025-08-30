@@ -44,5 +44,4 @@ The motive of NeoLife 2070 is to **reimagine personal productivity and wellbeing
 ---
 
 
-git clone https://github.com/your-username/neolife-2070.git
-cd neolife-2070
+
