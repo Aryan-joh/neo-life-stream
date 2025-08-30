@@ -61,7 +61,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cyberpunk Neon Colors
+				neon: {
+					purple: 'hsl(var(--neon-purple))',
+					cyan: 'hsl(var(--neon-cyan))',
+					magenta: 'hsl(var(--neon-magenta))',
+					blue: 'hsl(var(--neon-blue))',
+					green: 'hsl(var(--neon-green))'
 				}
+			},
+			backgroundImage: {
+				'gradient-holographic': 'var(--gradient-holographic)',
+				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-cyberpunk': 'var(--gradient-cyberpunk)'
+			},
+			boxShadow: {
+				'neon': 'var(--shadow-neon)',
+				'cyan': 'var(--shadow-cyan)',
+				'magenta': 'var(--shadow-magenta)',
+				'glow-intense': 'var(--glow-intense)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -88,7 +107,12 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'scan': 'scan 2s infinite',
+				'biometric-pulse': 'biometric-pulse 2s ease-in-out infinite',
+				'hologram-flicker': 'hologram-flicker 3s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite'
 			}
 		}
 	},
