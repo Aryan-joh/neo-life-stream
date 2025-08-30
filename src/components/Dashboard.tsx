@@ -5,13 +5,13 @@ import { Badge } from '@/components/ui/badge';
 import { ActivitySector, type Sector, type Activity } from './ActivitySector';
 import { HolographicChart } from './HolographicChart';
 import { AIAssistant } from './AIAssistant';
+import { UserProfile } from './UserProfile';
+import { AnalyticsModal } from './AnalyticsModal';
 import { 
   Brain, 
   Activity as ActivityIcon, 
   Clock, 
   Zap, 
-  TrendingUp,
-  Settings,
   User,
   LogOut
 } from 'lucide-react';
@@ -61,100 +61,100 @@ export const Dashboard: React.FC<DashboardProps> = ({ username, onLogout }) => {
     const sampleSectors: Sector[] = [
       {
         id: 'work',
-        name: 'Neural Work',
+        name: 'Work & Productivity',
         color: 'purple',
         icon: 'work',
         totalTime: 285,
         activities: [
           {
             id: '1',
-            name: 'Quantum Computing Research',
+            name: 'Software Development',
             duration: 120,
             timestamp: new Date(Date.now() - 120 * 60000),
-            metadata: 'DeepMind Neural Networks'
+            metadata: 'Full-stack Projects'
           },
           {
             id: '2',
-            name: 'Holographic Interface Design',
+            name: 'UI/UX Design',
             duration: 95,
             timestamp: new Date(Date.now() - 95 * 60000),
-            metadata: 'AR/VR Development'
+            metadata: 'Interface Design'
           },
           {
             id: '3',
-            name: 'AI Algorithm Optimization',
+            name: 'Project Management',
             duration: 70,
             timestamp: new Date(Date.now() - 70 * 60000),
-            metadata: 'Machine Learning Pipeline'
+            metadata: 'Team Coordination'
           }
         ]
       },
       {
         id: 'learning',
-        name: 'Knowledge Synthesis',
+        name: 'Learning & Education',
         color: 'cyan',
         icon: 'learning',
         totalTime: 165,
         activities: [
           {
             id: '4',
-            name: 'Quantum Physics Studies',
+            name: 'Online Courses',
             duration: 90,
             timestamp: new Date(Date.now() - 90 * 60000),
-            metadata: 'MIT OpenCourseWare'
+            metadata: 'Skill Development'
           },
           {
             id: '5',
-            name: 'Consciousness Theory',
+            name: 'Reading & Research',
             duration: 75,
             timestamp: new Date(Date.now() - 75 * 60000),
-            metadata: 'Neural Science Journal'
+            metadata: 'Industry Articles'
           }
         ]
       },
       {
         id: 'creativity',
-        name: 'Creative Flow',
+        name: 'Creative Activities',
         color: 'magenta',
         icon: 'creativity',
         totalTime: 110,
         activities: [
           {
             id: '6',
-            name: 'Holographic Art Creation',
+            name: 'Digital Art Creation',
             duration: 65,
             timestamp: new Date(Date.now() - 65 * 60000),
-            metadata: '3D Neural Sculptures'
+            metadata: 'Graphic Design'
           },
           {
             id: '7',
-            name: 'AI Music Composition',
+            name: 'Content Creation',
             duration: 45,
             timestamp: new Date(Date.now() - 45 * 60000),
-            metadata: 'Quantum Harmonics'
+            metadata: 'Video & Audio'
           }
         ]
       },
       {
         id: 'social',
-        name: 'Neural Network',
+        name: 'Social & Communication',
         color: 'blue',
         icon: 'social',
         totalTime: 85,
         activities: [
           {
             id: '8',
-            name: 'Consciousness Mesh Chat',
+            name: 'Team Meetings',
             duration: 50,
             timestamp: new Date(Date.now() - 50 * 60000),
-            metadata: 'Global Neural Link'
+            metadata: 'Video Conferences'
           },
           {
             id: '9',
-            name: 'Holographic Meetings',
+            name: 'Social Networking',
             duration: 35,
             timestamp: new Date(Date.now() - 35 * 60000),
-            metadata: 'Mars Colony Sync'
+            metadata: 'Community Engagement'
           }
         ]
       }
@@ -206,21 +206,19 @@ export const Dashboard: React.FC<DashboardProps> = ({ username, onLogout }) => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-6">
-            <div className="text-right">
+          <div className="flex items-center space-x-3 md:space-x-6">
+            <div className="text-right hidden sm:block">
               <p className="text-lg font-mono text-neon-cyan">{formatTime(currentTime)}</p>
               <p className="text-xs text-muted-foreground">{formatDate(currentTime)}</p>
             </div>
             
             <div className="flex items-center space-x-2">
-              <Badge variant="outline" className="glass-panel border-neon-purple/30 text-neon-purple">
+              <Badge variant="outline" className="glass-panel border-neon-purple/30 text-neon-purple hidden sm:flex">
                 <User className="w-3 h-3 mr-1" />
                 {username}
               </Badge>
-              <Button variant="ghost" size="icon">
-                <Settings className="w-4 h-4" />
-              </Button>
-              <Button variant="ghost" size="icon" onClick={onLogout}>
+              <UserProfile username={username} todayStats={todayStats} />
+              <Button variant="ghost" size="icon" onClick={onLogout} className="hover:bg-neon-red/20">
                 <LogOut className="w-4 h-4" />
               </Button>
             </div>
@@ -229,7 +227,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ username, onLogout }) => {
       </header>
 
       {/* Main Dashboard */}
-      <main className="max-w-7xl mx-auto p-6 space-y-6">
+      <main className="max-w-7xl mx-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
         {/* Current Activity Status */}
         <Card className="glass-panel border-2 border-neon-cyan/30 shadow-cyan">
           <CardContent className="p-4">
@@ -254,7 +252,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ username, onLogout }) => {
         </Card>
 
         {/* Stats Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           <Card className="glass-panel border border-neon-purple/30">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">Total Active Time</CardTitle>
@@ -301,18 +299,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ username, onLogout }) => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
           {/* Activity Sectors */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-bold text-foreground neon-text">Activity Sectors</h2>
-              <Button variant="holographic" size="sm">
-                <TrendingUp className="w-4 h-4 mr-2" />
-                View Analytics
-              </Button>
+              <h2 className="text-lg sm:text-xl font-bold text-foreground neon-text">Activity Sectors</h2>
+              <AnalyticsModal sectors={sectors} todayStats={todayStats} />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {sectors.map((sector) => (
                 <ActivitySector key={sector.id} sector={sector} />
               ))}
@@ -320,7 +315,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ username, onLogout }) => {
           </div>
 
           {/* Right Sidebar */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* 3D Chart */}
             <Card className="glass-panel border-2 border-neon-purple/30">
               <CardHeader>
