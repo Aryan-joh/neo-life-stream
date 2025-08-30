@@ -1,4 +1,4 @@
-# 🌌 NeoLife 2070 – Futuristic AI-Powered Digital Life Dashboard  
+# 🌌 NeoLife – Futuristic AI-Powered Digital Life Dashboard  
 
 > 🚀 A hackathon project imagining how humans in the year **2070** will track, reflect, and live with the help of AI companions.  
 
@@ -43,7 +43,11 @@ The motive of NeoLife 2070 is to **reimagine personal productivity and wellbeing
 
 ---
 
+<<<<<<< HEAD
  ## Install Dependencies
+=======
+## Install Dependencies
+>>>>>>> 2ca64ae94ee6bc5f3385db42486351f8eb0d1258
 npm install
 
 ---
