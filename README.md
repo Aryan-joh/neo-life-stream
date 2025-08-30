@@ -1,4 +1,4 @@
-# 🌌 NeoLife 2070 – Futuristic AI-Powered Digital Life Dashboard  
+# 🌌 NeoLife – Futuristic AI-Powered Digital Life Dashboard  
 
 > 🚀 A hackathon project imagining how humans in the year **2070** will track, reflect, and live with the help of AI companions.  
 
