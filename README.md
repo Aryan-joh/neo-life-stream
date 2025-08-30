@@ -42,6 +42,13 @@ The motive of NeoLife 2070 is to **reimagine personal productivity and wellbeing
 ✅ **End-of-Day Recap** – Holographic 3D summary with narrative insights.  
 
 ---
+## Neural Id 
+Anything that matches the format (Name + Neural ID hybrid)
+
+Name + Neural ID hybrid
+
+Aryan-NID-7QX9
+
 
 
 
