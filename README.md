@@ -5,7 +5,7 @@
 ---
 
 ## ✨ Overview  
-**NeoLife 2070** is a **futuristic AI-powered life dashboard** that acts as your **digital twin and companion**.  
+**NeoLife** is a **futuristic AI-powered life dashboard** that acts as your **digital twin and companion**.  
 It automatically tracks your activities, organizes them into **intelligent life sectors** (Work, Knowledge, Creativity, Social, Wellness), and generates **holographic visualizations with AI-driven insights**.  
 
 Instead of static charts, NeoLife 2070 provides a **narrative experience** with real-time updates, glowing cyberpunk UI, and a **voice-assisted AI recap** of your day.  
