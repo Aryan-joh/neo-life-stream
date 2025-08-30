@@ -43,10 +43,9 @@ The motive of NeoLife 2070 is to **reimagine personal productivity and wellbeing
 
 ---
 ## Neural Id 
-Anything that matches the format (Name + Neural ID hybrid)
+Anything that matches the format (Name-NID-NumericChar.)
 
-Name + Neural ID hybrid
-
+Example...
 Aryan-NID-7QX9
 
 
