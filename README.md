@@ -43,11 +43,10 @@ The motive of NeoLife 2070 is to **reimagine personal productivity and wellbeing
 
 ---
 
-<<<<<<< HEAD
- ## Install Dependencies
-=======
+
+
 ## Install Dependencies
->>>>>>> 2ca64ae94ee6bc5f3385db42486351f8eb0d1258
+
 npm install
 
 ---
