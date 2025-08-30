@@ -43,5 +43,12 @@ The motive of NeoLife 2070 is to **reimagine personal productivity and wellbeing
 
 ---
 
+Install Dependencies
+npm install
+
+---
+. Run the Dev Server
+npm run dev
+
 
 
